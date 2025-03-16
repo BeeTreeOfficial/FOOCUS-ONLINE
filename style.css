@@ -1,0 +1,172 @@
+body {
+  background-color: #EBF4F3;
+  color: #2C3249; /* Default body color */
+}
+
+.container {
+  width: 80%;
+  max-width: 960px; /* Approximate card width */
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Card Styles */
+.card {
+  background-color: #fff;
+  border-radius: 0.5em;
+  box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+/* Accent Card */
+.card.accent {
+  display: flex;
+  align-items: stretch;
+}
+
+.card.accent .accent-image {
+  flex: 0 0 35%; /* Approximate accent width */
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card.accent .card-content {
+  flex: 1;
+}
+
+/* Other Card Layouts (Example - Behind Accent) */
+.card.behind-accent {
+  position: relative;
+  overflow: hidden;
+}
+
+.card.behind-accent .accent-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px); /* Example of creating a background effect */
+}
+
+.card.behind-accent .card-content {
+  position: relative;
+  z-index: 1; /* Ensure content is on top of the blurred background */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent overlay */
+}
+
+/* Heading Styles */
+h1, h2, h3, h4 {
+  font-family: sans-serif; /* Replace with your heading font */
+  font-weight: 300;
+  margin-bottom: 0.75em;
+  color: #272D45; /* Heading color */
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.25em; }
+
+/* Grid Layout (for the "What is Gen AI" Card) */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Smart Layout */
+.smart-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.smart-layout-item {
+  flex: 1 1 45%; /* Distribute horizontally */
+  min-width: 250px; /* Prevent collapsing */
+  padding: 10px;
+  border: 1px solid #ccc; /* Example border */
+}
+
+/* Timeline Layout */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px; /* Add space for the timeline line */
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10px; /* Adjust position */
+  width: 2px;
+  background-color: #ccc;
+}
+
+div{
+  border-radius: 5vh;
+}
+
+div.accent-image{
+  background-position: center;
+  border-radius: 0vh;
+  transform: scaleY(1.05);
+  filter: drop-shadow(1px 1px 10px);
+}
+
+a:hover{
+  transform: scale(1.1);
+  z-index: 100;
+  margin: 15px;
+  background-color: #272D45;
+  color: wheat;
+}
+
+*{
+  transition: all 1s ease-in-out;
+}
+
+
+
+.timeline-item {
+  margin-bottom: 20px;
+  padding-left: 30px; /* Space for the item */
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  filter: drop-shadow(1px 1px 10px black);
+  position: absolute;
+  left: -5px;
+  top: 50%; /* Center the dot */
+  width: 10px;
+  height: 10px;
+  background-color: #437066; /* Accent color */
+  border-radius: 50%;
+}
+/* Button to link on website */
+.continue-button {
+background-color: #fff;
+border: 1px solid #ccc;
+color: #437066;
+padding: 10px 20px;
+text-decoration: none;
+font-weight: bold;
+border-radius: 5px;
+display: inline-block;
+margin-top: 10px;
+}
